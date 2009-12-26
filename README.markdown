@@ -1,8 +1,10 @@
 # Chrome extension: ICA-banken Autologin
 
-Chrome extension. Based on <http://userscripts.org/scripts/show/1711>.
+Chrome/Chromium extension.
 
-See "Options" for configuration and usage.
+Automatically logs in to ICA-banken (simplified login without token). See "Options" for configuration and usage.
+
+Based on <http://userscripts.org/scripts/show/1711>.
 
 Developed against Chromium 4.0.267.0 on OS X.
   
