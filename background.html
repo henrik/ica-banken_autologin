@@ -1,4 +1,15 @@
 <html>
   <script>
+  
+    function handleRequest(request, sender, sendResponse) {
+      if (request == "getCredentials") {
+        var response = { pnr: localStorage["pnr"], pin: localStorage["pin"] };
+        sendResponse(response);
+      } else {
+        sendResponse({});
+      }
+    }
+    chrome.extension.onRequest.addListener(handleRequest);
+  
   </script>
 </html>
