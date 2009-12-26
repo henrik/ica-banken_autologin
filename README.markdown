@@ -2,6 +2,8 @@
 
 Chrome extension. Based on <http://userscripts.org/scripts/show/1711>.
 
+See "Options" for configuration and usage.
+
 Developed against Chromium 4.0.267.0 on OS X.
   
 

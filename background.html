@@ -2,9 +2,8 @@
   <script>
   
     function handleRequest(request, sender, sendResponse) {
-      if (request == "getCredentials") {
-        var response = { pnr: localStorage["pnr"], pin: localStorage["pin"] };
-        sendResponse(response);
+      if (request == "getPIN") {
+        sendResponse(localStorage["pin"]);
       } else {
         sendResponse({});
       }

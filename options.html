@@ -1,12 +1,17 @@
 <html>
 <head>
+
+  <meta charset="UTF-8">
   <title>ICA-banken Autologin options</title>
+
   <script>
     function $(id) { return document.getElementById(id) }
     
     function load_options() {
       $("pnr").value = localStorage["pnr"] || "";
       $("pin").value = localStorage["pin"] || "";
+      
+      $("login_url").value = chrome.extension.getURL("login.html");
     }
   
     function save_options() {
@@ -19,8 +24,26 @@
       event.preventDefault();
     }
   </script>
+
+  <style>
+    h1 { font-size: 16pt; }
+    form { margin-bottom: 40px; }
+    input#login_url {
+      background: #fffff6;
+      width:35em;
+    }
+    code {
+      background: #ccc;
+      padding: 2px;
+      font-family: inherit;
+    }
+  </style>
+
 </head>
 <body onload="load_options()">
+  
+
+  <h1>Credentials</h1>
   
   <form onsubmit="save_options()">
     <p>
@@ -30,7 +53,7 @@
 
     <p>
       <label for="pin">PIN (e.g. <em>5678</em>):</label>
-      <input type="password" id="pin">
+      <input type="text" id="pin">
     </p>
 
     <p>
@@ -38,6 +61,21 @@
       <span id="status"></span>
     </p>
   </form>
+  
+
+  <h1>Bookmark</h1>
+  
+  <p>
+    After storing your credentials above, copy this URL:
+    <input type="text" id="login_url">
+  </p>
+  
+  <p>To autologin by typing <em>ica</em> in the address bar: right-click the address bar, select <code>Edit Search Engines…</code> and add it with that keyword.</p>
+  
+  <p>To autologin by clicking in the bookmarks bar, use <code>Bookmarks &gt; Bookmark This Page…</code> and then <code>Edit…</code>.</p>
+    
+  <p><strong>Please note</strong> that your PIN will be blocked if you get it wrong three times in a row, so don't play around too much.</p>
+
 
 </body>
 </html>
