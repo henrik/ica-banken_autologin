@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
 <head>
 
   <meta charset="UTF-8">
   <title>ICA-banken Autologin options</title>
-
+  <link rel="stylesheet" href="options.css" type="text/css">
   <script>
     function $(id) { return document.getElementById(id) }
     
@@ -25,25 +26,13 @@
     }
   </script>
 
-  <style>
-    h1 { font-size: 16pt; }
-    form { margin-bottom: 40px; }
-    input#login_url {
-      background: #fffff6;
-      width:35em;
-    }
-    code {
-      background: #ccc;
-      padding: 2px;
-      font-family: inherit;
-    }
-  </style>
-
 </head>
 <body onload="load_options()">
   
+  <h1><span id="ica-banken">ICA-banken</span> Autologin options</h1>
+  
 
-  <h1>Credentials</h1>
+  <h2>Credentials</h2>
   
   <form onsubmit="save_options()">
     <p>
@@ -63,7 +52,7 @@
   </form>
   
 
-  <h1>Bookmark</h1>
+  <h2>Bookmark</h2>
   
   <p>
     After storing your credentials above, copy this URL:
@@ -76,6 +65,9 @@
     
   <p><strong>Please note</strong> that your PIN will be blocked if you get it wrong three times in a row, so don't play around too much.</p>
 
+  <footer>
+    <p>This extension is not affiliated with ICA AB or ICA BANKEN AB.</p>
+  </footer>
 
 </body>
 </html>

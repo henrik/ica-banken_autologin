@@ -1,0 +1,40 @@
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  font-weight: normal;
+  font-size: 16px;
+}
+h1 #ica-banken {
+  background: url(https://www.icabanken.se/Templates/images/logo.gif) no-repeat -220px 0;
+  width: 130px;
+  height: 25px;
+  display: block;
+  text-indent: -9000px;
+}
+h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 50px;
+}
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+input#login_url {
+  background: #fffff6;
+  width:35em;
+}
+code {
+  background: #ccc;
+  padding: 2px;
+  font-family: inherit;
+}
+footer {
+  display: block;
+  margin-top: 50px;
+  color: #777;
+}
