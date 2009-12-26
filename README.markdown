@@ -1,4 +1,4 @@
-# Chrome extension: ICA-banken autologin
+# Chrome extension: ICA-banken Autologin
 
 Chrome extension. Based on <http://userscripts.org/scripts/show/1711>.
 
