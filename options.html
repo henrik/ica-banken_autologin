@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>ICA-banken Autologin options</title>
+  <script>
+    function $(id) { return document.getElementById(id) }
+    
+    function load_options() {
+      $("pnr").value = localStorage["pnr"] || "";
+      $("pin").value = localStorage["pin"] || "";
+    }
+  
+    function save_options() {
+      localStorage["pnr"] = $("pnr").value;
+      localStorage["pin"] = $("pin").value;
+      
+      $('status').innerHTML = "Saved.";
+      setTimeout(function() { $('status').innerHTML = "" }, 5000);
+      
+      event.preventDefault();
+    }
+  </script>
+</head>
+<body onload="load_options()">
+  
+  <form onsubmit="save_options()">
+    <p>
+      <label for="pnr">Personnummer (e.g. <em>750726-1234</em>):</label>
+      <input type="text" id="pnr">
+    </p>
+
+    <p>
+      <label for="pin">PIN (e.g. <em>5678</em>):</label>
+      <input type="password" id="pin">
+    </p>
+
+    <p>
+      <button type="submit">Save</button>
+      <span id="status"></span>
+    </p>
+  </form>
+
+</body>
+</html>
